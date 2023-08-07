@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# 2013-05-05:v1
+
+# Explicitly cached 'master entries'.
+CACHE:
+img/favicon.ico
+css/flexStyles.css
+css/bootstrap.min.css
+css/bootstrap-responsive.min.css
+js/bootstrap.min.js
+js/bootstrap-collapse.js
+js/bootstrap-scrollspy.js
+js/jquery-1.7.2.min.js
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+# static.html will be served if main.py is inaccessible (/main.py /static.html)
+# offline.jpg will be served in place of all images in images/large/ (images/large/ images/offline.jpg)
+# offline.html will be served in place of all other .html files (*.html images/offline.jpg)
+FALLBACK:
+*.php /index.html
+*.html /index.html

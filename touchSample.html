@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+<div id="met1" style="background-color:black; width:250px; height:250px; position:absolute; left:0px; top:0px;">
+</div>
+
+
+<script type="text/javascript">
+var body = document.getElementsByTagName("body")[0];
+var met1 = document.getElementById("met1");
+
+body.addEventListener('touchend', function(event) 
+{
+	// If there's exactly one finger inside this element
+	if (event.targetTouches.length == 1) 
+	{
+		var touch = event.targetTouches[0];
+		
+		// Place element where the finger is
+		met1.style.left = touch.pageX + 'px';
+		met1.style.top = touch.pageY + 'px';
+	}
+}, false);
+</script>
+
+
+</body>
+</html>
